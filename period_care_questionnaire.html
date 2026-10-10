@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8e8ed">
+<title>給妳的生理期關懷小問卷</title>
+<style>
+:root{--rose:#b85f7b;--rose-dark:#8e405a;--pink:#f8e8ed;--cream:#fffaf7;--ink:#392e33;--muted:#7e7076;--line:#f0dce3;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#fff7f8 0%,#fffaf7 48%,#fff 100%);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.65}
+header{padding:18px 20px;background:#ffffffd9;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-weight:800;color:var(--rose-dark);letter-spacing:.04em}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:999px;font-size:.9rem}.navlinks a:hover{background:var(--pink);color:var(--rose-dark)}
+main{max-width:1000px;margin:0 auto;padding:28px 18px 60px}.hero{background:linear-gradient(135deg,#f8e8ed,#fff0e8);border:1px solid #f2d8e0;border-radius:28px;padding:34px 28px;margin:8px 0 24px;position:relative;overflow:hidden}.hero:after{content:"♡";position:absolute;right:30px;top:0;font-size:130px;color:#ffffff9c;line-height:1}.eyebrow{color:var(--rose-dark);font-weight:800;font-size:.82rem;letter-spacing:.13em}.hero h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.2;margin:8px 0 14px;max-width:650px}.hero p{max-width:620px;color:#66545c;margin:0 0 20px}.btn{border:0;border-radius:999px;padding:12px 18px;background:var(--rose);color:#fff;font-weight:750;font-size:.96rem;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{background:var(--rose-dark)}.btn.secondary{background:#fff;color:var(--rose-dark);border:1px solid var(--line)}.btn.light{background:#f9edf1;color:var(--rose-dark)}.hero .btn{position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 30px}.tile{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;text-decoration:none;color:inherit;box-shadow:0 5px 20px #9b65700b;transition:transform .18s}.tile:hover{transform:translateY(-3px)}.tile .emoji{font-size:1.8rem}.tile h3{margin:8px 0 4px;font-size:1.05rem}.tile p{margin:0;color:var(--muted);font-size:.9rem}
+section.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;margin:20px 0;box-shadow:0 8px 24px #8d58600a;scroll-margin-top:90px}.section-head{display:flex;gap:12px;align-items:center;margin-bottom:18px}.section-icon{width:44px;height:44px;display:grid;place-items:center;background:var(--pink);border-radius:14px;font-size:1.35rem}.section-head h2{margin:0;font-size:1.3rem}.section-head p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.question{padding:16px 0;border-top:1px solid #f4e8ec}.question:first-of-type{border-top:0}.qtitle{font-weight:750;margin-bottom:10px}.hint{font-weight:400;color:var(--muted);font-size:.84rem}.options{display:flex;flex-wrap:wrap;gap:9px}.option{display:inline-flex;align-items:center;gap:8px;border:1px solid #eadce1;border-radius:999px;padding:9px 13px;cursor:pointer;background:#fff;font-size:.94rem}.option:has(input:checked){background:#fff0f4;border-color:var(--rose);color:var(--rose-dark)}input[type=radio],input[type=checkbox]{accent-color:var(--rose);width:16px;height:16px}
+textarea{width:100%;min-height:100px;border:1px solid #eadce1;border-radius:14px;padding:12px;font:inherit;resize:vertical;background:#fffdfd}textarea:focus{outline:2px solid #f1c7d4;border-color:var(--rose)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.result{display:none;margin-top:18px;padding:18px;border-radius:16px;background:#fff5f7;border:1px solid var(--line);white-space:pre-wrap;overflow-wrap:anywhere}.result.show{display:block}.notice{font-size:.88rem;color:var(--muted);background:#fff8f4;border-radius:14px;padding:13px 15px}.footer{text-align:center;color:var(--muted);font-size:.86rem;padding:24px 10px}
+@media(max-width:700px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:2px}.navlinks a{padding:6px 8px}.hero{padding:27px 22px}.hero:after{right:12px;font-size:90px}.grid{grid-template-columns:1fr}.tile{display:flex;gap:14px;align-items:center}.tile .emoji{font-size:1.7rem}.tile h3{margin-top:0}.tile p{font-size:.86rem}section.panel{padding:19px 16px}.option{width:100%;border-radius:13px}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="主選單">
+    <div class="brand">♡ 給妳的關懷清單</div>
+    <div class="navlinks">
+      <a href="#start">首頁</a><a href="#survey">填寫問卷</a><a href="#tips">關懷指南</a><a href="#about">隱私說明</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="start">
+    <div class="eyebrow">A LITTLE CARE, JUST FOR YOU</div>
+    <h1>更懂妳一點，<br>把關心變成妳喜歡的方式。</h1>
+    <p>這不是考試，也不是要判斷誰對誰錯。只想了解妳在生理期時的感受、飲食偏好和陪伴需求，讓我們少一點猜測，多一點理解。</p>
+    <a class="btn" href="#survey">開始填寫　↓</a>
+  </section>
+
+  <div class="grid" aria-label="快速選單">
+    <a class="tile" href="#survey"><div class="emoji">📝</div><div><h3>關懷需求問卷</h3><p>用幾分鐘說說妳真正需要什麼。</p></div></a>
+    <a class="tile" href="#tips"><div class="emoji">🍧</div><div><h3>飲食與陪伴指南</h3><p>不強迫、不預設，依妳的喜好安排。</p></div></a>
+    <a class="tile" href="#about"><div class="emoji">🔒</div><div><h3>隱私與使用方式</h3><p>答案只在這個瀏覽器整理，不會自動上傳。</p></div></a>
+  </div>
+
+  <form id="careForm">
+  <section class="panel" id="survey">
+    <div class="section-head"><div class="section-icon">🌷</div><div><h2>生理期關懷需求問卷</h2><p>沒有標準答案，選最符合妳當下感受的選項就好。</p></div></div>
+
+    <div class="question"><div class="qtitle">1. 月經期間，妳通常最在意什麼？ <span class="hint">（可複選）</span></div><div class="options">
+      <label class="option"><input type="checkbox" name="q1" value="肚子痛或腰痠">肚子痛或腰痠</label><label class="option"><input type="checkbox" name="q1" value="容易疲倦、想睡覺">容易疲倦、想睡覺</label><label class="option"><input type="checkbox" name="q1" value="心情煩躁或情緒起伏">心情煩躁或情緒起伏</label><label class="option"><input type="checkbox" name="q1" value="食慾改變、特別想吃某些食物">食慾改變、特別想吃某些食物</label><label class="option"><input type="checkbox" name="q1" value="沒有明顯不舒服">沒有明顯不舒服</label>
+    </div></div>
+    <div class="question"><div class="qtitle">2. 月經期間，妳比較喜歡哪一類食物？</div><div class="options">
+      <label class="option"><input type="radio" name="q2" value="冰品、甜點" required>冰品、甜點</label><label class="option"><input type="radio" name="q2" value="熱食、熱飲">熱食、熱飲</label><label class="option"><input type="radio" name="q2" value="一般正常餐點">一般正常餐點</label><label class="option"><input type="radio" name="q2" value="看當天心情決定">看當天心情決定</label><label class="option"><input type="radio" name="q2" value="其他或沒有特別偏好">其他／沒有特別偏好</label>
+    </div></div>
+    <div class="question"><div class="qtitle">3. 如果男友帶妳去吃冰，妳會怎麼想？</div><div class="options">
+      <label class="option"><input type="radio" name="q3" value="很開心，覺得他懂我" required>很開心，覺得他懂我</label><label class="option"><input type="radio" name="q3" value="可以，但要看當天身體狀況">可以，看當天狀況</label><label class="option"><input type="radio" name="q3" value="比較想吃其他東西">比較想吃其他東西</label><label class="option"><input type="radio" name="q3" value="不想出門，希望在家休息">不想出門，想在家休息</label>
+    </div></div>
+    <div class="question"><div class="qtitle">4. 心情不好時，妳最希望男友怎麼做？</div><div class="options">
+      <label class="option"><input type="radio" name="q4" value="抱抱我、安慰我" required>抱抱我、安慰我</label><label class="option"><input type="radio" name="q4" value="安靜聽我說話">安靜聽我說話</label><label class="option"><input type="radio" name="q4" value="帶我吃喜歡的東西">帶我吃喜歡的東西</label><label class="option"><input type="radio" name="q4" value="讓我自己待一下">讓我自己待一下</label><label class="option"><input type="radio" name="q4" value="主動幫我處理事情">主動幫我處理事情</label>
+    </div></div>
+    <div class="question"><div class="qtitle">5. 當妳不開心時，男友一直問「妳怎麼了」，妳的感受是？</div><div class="options">
+      <label class="option"><input type="radio" name="q5" value="覺得他很關心我" required>覺得他很關心我</label><label class="option"><input type="radio" name="q5" value="問一兩次可以，之後給我空間">問一兩次就好，之後給空間</label><label class="option"><input type="radio" name="q5" value="會覺得煩躁、有壓力">覺得煩躁、有壓力</label><label class="option"><input type="radio" name="q5" value="希望他先觀察我的需求">希望他先觀察需求</label>
+    </div></div>
+    <div class="question"><div class="qtitle">6. 如果妳正在生氣，妳希望男友怎麼處理？</div><div class="options">
+      <label class="option"><input type="radio" name="q6" value="先哄我、安撫我" required>先哄我、安撫我</label><label class="option"><input type="radio" name="q6" value="先聽我把話說完">先聽我把話說完</label><label class="option"><input type="radio" name="q6" value="給我一點時間冷靜">給我一點時間冷靜</label><label class="option"><input type="radio" name="q6" value="冷靜後再討論">冷靜後再討論</label>
+    </div></div>
+    <div class="question"><div class="qtitle">7. 月經期間，妳理想的約會方式是？</div><div class="options">
+      <label class="option"><input type="radio" name="q7" value="吃甜點、吃冰、逛街" required>吃甜點、吃冰、逛街</label><label class="option"><input type="radio" name="q7" value="在家追劇、休息">在家追劇、休息</label><label class="option"><input type="radio" name="q7" value="吃一頓喜歡的正餐">吃喜歡的正餐</label><label class="option"><input type="radio" name="q7" value="散步或輕鬆出門">散步或輕鬆出門</label><label class="option"><input type="radio" name="q7" value="不一定，當天再決定">當天再決定</label>
+    </div></div>
+    <div class="question"><div class="qtitle">8. 妳希望男友主動照顧到什麼程度？</div><div class="options">
+      <label class="option"><input type="radio" name="q8" value="主動安排，不用我開口" required>主動安排，不用我開口</label><label class="option"><input type="radio" name="q8" value="先問我的意見再安排">先問我再安排</label><label class="option"><input type="radio" name="q8" value="我提出需求時再幫忙">我提出需求時再幫忙</label><label class="option"><input type="radio" name="q8" value="讓我自己決定就好">讓我自己決定就好</label>
+    </div></div>
+    <div class="question"><div class="qtitle">9. 哪些事最容易讓妳覺得不被理解？ <span class="hint">（可複選）</span></div><div class="options">
+      <label class="option"><input type="checkbox" name="q9" value="說我脾氣差、很難哄">說我脾氣差、很難哄</label><label class="option"><input type="checkbox" name="q9" value="一直講道理或反駁">一直講道理或反駁</label><label class="option"><input type="checkbox" name="q9" value="強迫我吃不喜歡的東西">強迫我吃不喜歡的東西</label><label class="option"><input type="checkbox" name="q9" value="一直追問、不給我空間">一直追問、不給空間</label><label class="option"><input type="checkbox" name="q9" value="知道我不舒服卻不關心">知道我不舒服卻不關心</label><label class="option"><input type="checkbox" name="q9" value="其他">其他</label>
+    </div></div>
+    <div class="question"><div class="qtitle">10. 下次生理期，妳最希望男友做什麼？</div><div class="options">
+      <label class="option"><input type="radio" name="q10" value="主動關心身體狀況" required>主動關心身體狀況</label><label class="option"><input type="radio" name="q10" value="準備我喜歡吃的東西">準備我喜歡吃的東西</label><label class="option"><input type="radio" name="q10" value="陪伴我或安排約會">陪伴我或安排約會</label><label class="option"><input type="radio" name="q10" value="給我空間、不打擾我">給我空間、不打擾我</label><label class="option"><input type="radio" name="q10" value="依當天情況彈性調整">依當天情況彈性調整</label>
+    </div></div>
+    <div class="question"><div class="qtitle">11. 還有什麼希望男友知道？ <span class="hint">（選填）</span></div><textarea name="q11" placeholder="例如：我不舒服時，希望你陪我，但不要一直問問題……"></textarea></div>
+    <div class="actions"><button type="submit" class="btn">整理我的答案 ✨</button><button type="reset" class="btn secondary" id="resetBtn">重新填寫</button></div>
+    <div id="result" class="result" aria-live="polite"></div>
+    <div id="resultActions" class="actions" style="display:none"><button type="button" class="btn" id="copyBtn">複製答案</button><button type="button" class="btn secondary" id="shareBtn">分享結果</button></div>
+  </section>
+  </form>
+
+  <section class="panel" id="tips">
+    <div class="section-head"><div class="section-icon">🍧</div><div><h2>關懷小指南</h2><p>先問她的需求，再決定怎麼做。</p></div></div>
+    <div class="question"><div class="qtitle">💬 先確認，不要猜</div>「妳現在想要我陪妳、聽妳說，還是想先自己休息？」</div>
+    <div class="question"><div class="qtitle">🍨 飲食照喜好</div>如果她想吃冰、吃了也不會不舒服，就可以依她的意願安排。吃冰不是醫學上的「降火氣」療法，也沒有必要因為月經一律禁吃冰品。</div>
+    <div class="question"><div class="qtitle">🫶 情緒先降溫</div>避免用「妳是不是月經來才這樣」等說法。若雙方情緒太高，可以先休息，等冷靜後再談。</div>
+    <div class="question"><div class="qtitle">🩺 不適要重視</div>若疼痛嚴重影響日常生活、出血異常或出現昏厥等症狀，應尋求醫療評估。</div>
+  </section>
+
+  <section class="panel" id="about">
+    <div class="section-head"><div class="section-icon">🔒</div><div><h2>隱私與使用方式</h2><p>這是一份可分享的靜態網頁。</p></div></div>
+    <div class="notice">本頁不會自動把答案傳送到伺服器，也沒有連接資料庫。答案只在目前瀏覽器中整理；若使用「複製答案」或「分享結果」，則由你主動操作分享。公開網址代表任何取得連結的人都可能打開頁面，請勿填入不想分享的個人敏感資訊。</div>
+  </section>
+  <div class="footer">用理解取代猜測，用溝通累積默契 ♡<br>本問卷僅供伴侶溝通參考，不作為醫療診斷。</div>
+</main>
+<script>
+const form=document.getElementById('careForm'),result=document.getElementById('result'),resultActions=document.getElementById('resultActions');
+let summary='';
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+ const data=new FormData(form);
+ const labels={
+ q1:'1. 月經期間在意的事',q2:'2. 飲食偏好',q3:'3. 對吃冰約會的想法',q4:'4. 心情不好時希望的陪伴',q5:'5. 被反覆追問的感受',q6:'6. 生氣時希望的處理方式',q7:'7. 理想約會方式',q8:'8. 希望男友主動照顧的程度',q9:'9. 容易感到不被理解的情況',q10:'10. 下次最希望男友做的事',q11:'11. 自由補充'
+ };
+ summary='給妳的生理期關懷需求問卷｜填寫結果\n\n';
+ Object.keys(labels).forEach(k=>{
+  const values=data.getAll(k).filter(Boolean);
+  summary+=labels[k]+'：'+(values.join('、')||'未填寫')+'\n';
+ });
+ result.textContent=summary;result.classList.add('show');resultActions.style.display='flex';
+ result.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+document.getElementById('resetBtn').addEventListener('click',()=>{result.classList.remove('show');resultActions.style.display='none';summary='';});
+document.getElementById('copyBtn').addEventListener('click',async()=>{
+ try{await navigator.clipboard.writeText(summary);alert('答案已複製，可以貼到訊息中分享。')}
+ catch(e){const t=document.createElement('textarea');t.value=summary;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();alert('答案已複製，可以貼到訊息中分享。')}
+});
+document.getElementById('shareBtn').addEventListener('click',async()=>{
+ if(navigator.share){try{await navigator.share({title:'生理期關懷問卷結果',text:summary})}catch(e){}}
+ else {try{await navigator.clipboard.writeText(summary);alert('此瀏覽器不支援原生分享，答案已複製。')}catch(e){alert('請先按「複製答案」再分享。')}}
+});
+</script>
+</body>
+</html>
